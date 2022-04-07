@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    <div id="container">
+
+    </div>
+    <div>
+        <table>
+            <tr>
+                <th>Enter Height</th>
+                <td><input type="number" id="height" /></td>
+            </tr>
+            <tr>
+                <th>Enter Width</th>
+                <td><input type="number" id="width" /></td>
+            </tr>
+            <tr>
+                <th>Enter Background Color</th>
+                <td><input type="color" id="backgroundColor" /></td>
+            </tr>
+            <tr>
+                <th></th>
+                <td><button type="button" id="btn">Create New Div</button></td>
+            </tr>
+        </table>
+<!--      <button type="button" id="btn">Create New Div</button>-->
+    </div>
+
+<script>
+   // var data = [10,20,30,'shofi',50,true,100.20,false,'md'];
+   // for (key in data)
+   // {
+   //     document.write(data[key]+'<br/>');
+   // }
+   //document.write(data[5]);
+
+    // var student = [
+    //     {
+    //         'name'      : 'Md. Shofiullah',
+    //         'mobile'    : '132654978',
+    //         'email'     : 'demo@demo.com',
+    //     },
+    //     {
+    //         'name'      : 'Md. demo',
+    //         'mobile'    : '98775464',
+    //         'email'     : 'test@demo.com',
+    //     },
+    //     {
+    //         'name'      : 'Md. sdfhaskldf',
+    //         'mobile'    : '68744987',
+    //         'email'     : 'demo@test.com',
+    //     },
+    // ];
+    //document.write(student[1].name);
+
+    // for (key in student)
+    // {
+    //     document.write(student[key].name+' '+student[key].mobile+' '+student[key].email+'<br/>');
+    // }
+    // console.log(student)
+
+    // function test()
+    // {
+    //     var x = 10;
+    //     var y = 20;
+    //     var z = x + y;
+    //     document.write(z);
+    // }
+    // test();
+
+   function createDiv(height, width, color)
+   {
+       var div = document.createElement('div');
+       div.style.height = height+'px';
+       div.style.width = width+'px';
+       div.style.backgroundColor = color;
+       var containerDiv = document.getElementById('container');
+       containerDiv.append(div);
+   }
+   // createDiv(200, 300, 'red');
+   // document.write('<br/>==================<br/>');
+   // createDiv(400, 500, 'yellow');
+   // document.write('<br/>==================<br/>');
+   // createDiv(600, 700, 'green');
+   // document.write('<br/>==================<br/>');
+    var btn = document.getElementById('btn');
+    btn.onclick = function ()
+    {
+        var height = document.getElementById('height').value;
+        var wight = document.getElementById('width').value;
+        var backgroundColor = document.getElementById('backgroundColor').value;
+        createDiv(height, wight, backgroundColor);
+    }
+
+
+</script>
+</body>
+</html>
